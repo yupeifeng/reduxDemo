@@ -11,7 +11,10 @@ const demo1Store = (state = { welcomeText: '', needCode: '' }, action = {}) => {
 	}
 };
 
-const demo2Store = (state = { columnName: '', newsTitle: '', selectText: '选择器1', dUserCode: '' }, action = {}) => {
+const demo2Store = (
+	state = { columnName: '', newsTitle: '', selectText: '选择器1', dUserCode: '', demo2Lable: 'demo2Lable' },
+	action = {}
+) => {
 	switch (action.type) {
 		case 'change_columnName':
 			return { ...state, columnName: action.columnName };
@@ -26,7 +29,15 @@ const demo2Store = (state = { columnName: '', newsTitle: '', selectText: '选择
 	}
 };
 
+const demo2Lable = (state = { demo2Lable: 'demo2Lable' }, action = {}) => {
+	switch (action.type) {
+		default:
+			return { ...state };
+	}
+};
+
 export default combineReducers({
 	demo1Store: demo1Store,
-	demo2Store: demo2Store
+	demo2Store: demo2Store,
+	demo2Lable: demo2Lable
 });

@@ -32,8 +32,8 @@ let getNewsList = (userCode, columnId) => {
 		});
 };
 
-exports.changeDUserCode = dUserCode => async dispatch => {
-	dispatch({ type: 'change_dUserCode', dUserCode: dUserCode });
+exports.changeDUserCode = dUserCode => {
+	return { type: 'change_dUserCode', dUserCode: dUserCode };
 };
 
 exports.changeColumn = userCode => async dispatch => {
