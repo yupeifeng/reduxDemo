@@ -7,7 +7,7 @@ const demo1Store = (state = { welcomeText: '', needCode: '' }, action = {}) => {
 		case 'change_needCode':
 			return { ...state, needCode: action.needCode };
 		default:
-			return { ...state };
+			return state;
 	}
 };
 
@@ -25,19 +25,19 @@ const demo2Store = (
 		case 'change_dUserCode':
 			return { ...state, dUserCode: action.dUserCode };
 		default:
-			return { ...state };
+			return state;
 	}
 };
 
-const demo2Lable = (state = { demo2Lable: 'demo2Lable' }, action = {}) => {
+const demo2Label = (state = { demo2Label: 'demo2Label' }, action = {}) => {
 	switch (action.type) {
 		default:
-			return { ...state };
+			return state;
 	}
 };
 
 export default combineReducers({
 	demo1Store: demo1Store,
 	demo2Store: demo2Store,
-	demo2Lable: demo2Lable
+	demo2Label: demo2Label
 });

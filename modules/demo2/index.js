@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Layout, Breadcrumb, Input, Select } from 'antd';
 import { changeDUserCode, changeColumn, changeState } from './action';
 import Demo2Input from './components/input';
-import Demo2Lable from './components/lable';
+import Demo2Label from './components/label';
 
 const { Option } = Select;
 const { Content } = Layout;
@@ -41,7 +41,7 @@ class demo2 extends React.Component {
 					<div>
 						<div>
 							<Demo2Input />
-							<Demo2Lable />
+							<Demo2Label />
 						</div>
 						<div>栏目名称：{that.props.demo2Store.columnName}</div>
 						<div>新闻标题：{that.props.demo2Store.newsTitle}</div>

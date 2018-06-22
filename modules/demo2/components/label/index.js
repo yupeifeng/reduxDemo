@@ -8,7 +8,7 @@ import { Form } from 'antd';
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		demo2Lable: state.demo2Lable
+		demo2Label: state.demo2Label
 	};
 };
 
@@ -16,11 +16,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 	return {};
 };
 
-class demo2Lable extends React.Component {
+class demo2Label extends React.Component {
 	render() {
-		console.log('demo2Lable');
-		return <div>{this.props.demo2Lable.demo2Lable}</div>;
+		console.log('demo2Label');
+		return <div>{this.props.demo2Label.demo2Label}</div>;
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form.create()(demo2Lable));
+export default connect(mapStateToProps, mapDispatchToProps)(Form.create()(demo2Label));
