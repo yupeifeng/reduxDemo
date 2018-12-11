@@ -40,13 +40,13 @@ exports.changeColumn = userCode => async dispatch => {
 	let columnList = await getColumnList(userCode);
 	dispatch({
 		type: 'change_columnName',
-		columnName: columnList[0].columnName
+		columnName: columnList[0] && columnList[0].columnName ? columnList[0].columnName : '暂无信息'
 	});
 
 	let newsList = await getNewsList(userCode, columnList[0].flowId);
 	dispatch({
 		type: 'change_newsTitle',
-		newsTitle: newsList[0].newsTitle
+		newsTitle: newsList[0] && newsList[0].newsTitle ? newsList[0].newsTitle : '暂无信息'
 	});
 };
 
